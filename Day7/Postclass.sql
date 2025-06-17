@@ -18,7 +18,7 @@ INSERT INTO Department (DepartmentID, DepartmentName) VALUES
 (4, 'Physio');
 
 INSERT INTO Employee (EmployeeID, Name, DepartmentID, Salary) VALUES
-(01, 'Ganga', 3, 80000.00),
-(02, 'Devika', 1, 75000.00),
-(03, 'Chotu', 2, 71000.00),
-(04, 'Shasti', 4, 68000.00);
+(01, 'Ganga', 3, 80000),
+(02, 'Devika', 1, 75000),
+(03, 'Chotu', 2, 71000),
+(04, 'Shasti', 4, 68000);
