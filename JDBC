@@ -1,0 +1,14 @@
+package JDBCmain;
+import java.sql.*;
+public class jdbcmain {
+	public static void main(String[] args) throws Exception {
+	//Class.forName("com.mysql.cj.jdbc.Driver");
+		String url="";
+		String username="";
+		String password="";
+		
+	Connection connect=DriverManager.getConnection(url, username, password);
+	System.out.println("Driver Loaded");
+
+}
+}
