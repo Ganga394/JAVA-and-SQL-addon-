@@ -1,14 +1,35 @@
 package JDBCmain;
+
 import java.sql.*;
+
 public class jdbcmain {
 	public static void main(String[] args) throws Exception {
-	//Class.forName("com.mysql.cj.jdbc.Driver");
-		String url="";
-		String username="";
-		String password="";
-		
-	Connection connect=DriverManager.getConnection(url, username, password);
-	System.out.println("Driver Loaded");
+		// Class.forName("com.mysql.cj.jdbc.Driver");
 
-}
+		String url = "jdbc:mysql://localhost:3306/emp";
+		String username = "root";
+		String password = "";
+
+		// get connection
+		Connection connect = DriverManager.getConnection(url, username, password);
+		System.out.println("Driver Loaded");
+
+		// create statement
+		Statement st = connect.createStatement();
+
+		// execute query
+		String sql = "select ename from emp where sal>=2000";
+		
+
+		ResultSet rs = st.executeQuery(sql);
+		while(rs.next()) {
+			System.out.println(rs.getString(1));
+			
+		}
+		//rs.next();
+		//System.out.println(rs.getInt(1) + " " + rs.getString(2) + " " + rs.getString(3)+ " " + rs.getInt(4));
+		//rs.next();
+		//System.out.println(rs.getInt(1) + " " + rs.getString(2) + " " + rs.getString(3)+ " " + rs.getInt(4));
+
+	}
 }
